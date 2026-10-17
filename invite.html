@@ -1,0 +1,137 @@
+<!doctype html>
+<!--
+  /invite — brand invite landing page.
+
+  WHO SEES THIS: only someone who taps an invite link WITHOUT the Aila app
+  installed. When the app IS installed, iOS matches the universal link
+  (see /.well-known/apple-app-site-association, component "/invite") and opens
+  the app directly — this page never renders. So this page's only job is to
+  explain what Aila is and how to get it.
+
+  Right now the honest answer is that Aila isn't available yet, so there is no
+  App Store button. When the app ships, add the real apps.apple.com link as
+  the primary call to action below (replace the "coming soon" block).
+
+  PRIVACY — the invite token: the invite token arrives in the URL fragment
+  (the part after '#'). Fragments are never sent to the server, and this page
+  deliberately keeps it that way. There is no JavaScript here: nothing reads
+  location.hash, nothing logs it, and nothing sends it anywhere. Do not add
+  analytics or any script that touches the fragment.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You're invited to Aila</title>
+  <meta name="description" content="Aila — marketing for everyone. You've been invited. Here's how to get started." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#faf9f5" />
+  <meta property="og:title" content="You're invited to Aila" />
+  <meta property="og:description" content="Aila — marketing for everyone." />
+  <style>
+    :root {
+      --violet: #918de2;
+      --violet-soft: #c5bafe;
+      --ink: #242629;
+      --muted: #5a5c61;
+      --bg: #faf9f5;
+      --card: #ffffff;
+      --line: #e6e1df;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    .card {
+      width: 100%;
+      max-width: 440px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 24px 60px -24px rgba(36, 38, 41, 0.18);
+    }
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--violet), var(--violet-soft));
+      color: #fff;
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--violet);
+      margin: 0 0 12px;
+    }
+    h1 {
+      font-size: 27px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 14px;
+    }
+    p { margin: 0 0 16px; color: var(--muted); font-size: 16px; }
+    p.lead { color: var(--ink); }
+    .status {
+      margin: 28px 0 8px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: #f4f2f7;
+      border: 1px solid var(--line);
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .status strong { color: var(--violet); }
+    .footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark" aria-hidden="true">A</div>
+    <p class="eyebrow">You've been invited</p>
+    <h1>Welcome to Aila</h1>
+    <p class="lead">Marketing for everyone. Link Meta, Google, and TikTok in a couple of clicks — Aila reads your history, plans your campaigns, and acts on them while you watch the Aila Score climb.</p>
+
+    <!--
+      APP AVAILABILITY. When the app ships, replace this block with the App
+      Store call to action, e.g.:
+        <a class="btn" href="https://apps.apple.com/app/idXXXXXXXXX">Get Aila on the App Store</a>
+    -->
+    <div class="status">
+      Aila isn't available to download yet. We're putting the finishing
+      touches on the app — <strong>it's coming soon</strong>, and your invite
+      will be waiting for you when it lands.
+    </div>
+
+    <p class="footer">
+      Learn more at <a href="https://aila-io.com">aila-io.com</a><br />
+      © 2026 Aila — Marketing for everyone.
+    </p>
+  </main>
+</body>
+</html>

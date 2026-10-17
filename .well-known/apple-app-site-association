@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["BUV5J6DT39.com.aila-io.mobile"],
+        "components": [
+          {
+            "/": "/invite",
+            "comment": "Brand invites; the token is in the fragment"
+          }
+        ]
+      }
+    ]
+  }
+}
